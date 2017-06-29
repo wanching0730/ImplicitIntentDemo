@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         String title = getResources().getString(R.string.app_chooser);
         Intent chooser = Intent.createChooser(intent, title);
+        //will be able to choose app if more than 1 related app
 
         if(intent.resolveActivity(getPackageManager()) != null)
             startActivity(chooser);
