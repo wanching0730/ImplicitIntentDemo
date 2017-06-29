@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ImplicitIntentDemo</string>
+    <string name="app_chooser">Choose an app</string>
+
 </resources>

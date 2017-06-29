@@ -22,7 +22,13 @@ public class MainActivity extends AppCompatActivity {
         intent.setAction(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_TEXT, message);
         intent.setType("text/plain");
-        startActivity(intent);
+       // startActivity(intent);
+
+        String title = getResources().getString(R.string.app_chooser);
+        Intent chooser = Intent.createChooser(intent, title);
+
+        if(intent.resolveActivity(getPackageManager()) != null)
+            startActivity(chooser);
 
     }
 }
